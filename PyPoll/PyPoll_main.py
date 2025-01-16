@@ -46,10 +46,6 @@ print('----------------------------')
 print(f'Total Votes: {total_votes}')
 print('----------------------------')
 
-# Print statistics for each Candidate
-print(f'----------------------------') 
-print(f'Winner: ')
-print(f'----------------------------')
 
 file_to_output = "PyPoll\\Analysis\\election_analysis.txt"
 # Open a text file to save the output
@@ -77,7 +73,8 @@ with open(file_to_output, "w") as txt_file:
         txt_file.write(voter_output)
 
     # Generate and print the winning candidate summary
-    winner_summary = f'Winner: {Winner}\nWinning Vote Count: {Winner_count}\n'
+    winner_summary = f'Winner: {Winner}\n'
     print(winner_summary)
     txt_file.write('----------------------------\n')
     txt_file.write(winner_summary)
+    txt_file.write('----------------------------\n')
